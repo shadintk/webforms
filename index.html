@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎮 GameZone Registration Portal</title>
+</head>
+<body bgcolor="black" text="white">
+
+  <center>
+    <h1 style="color: #FFD700; font-size: 42px;">🔥 Welcome to GameZone Tournament 🔥</h1>
+    <marquee scrollamount="8" style="color: #00FFFF; font-size: 20px;">Only Legends Register Here 🕹️🎯</marquee>
+
+    <form onsubmit="return validateForm()">
+      <table border="0" cellpadding="12" bgcolor="#1e1e1e" style="border-radius: 10px;">
+        
+        <tr>
+          <td align="right"><font color="#00FF00">🎮 Gamer Tag:</font></td>
+          <td><input type="text" name="username" id="username" minlength="3" maxlength="20" required></td>
+        </tr>
+        
+        <tr>
+          <td align="right"><font color="#00FF00">📧 Email:</font></td>
+          <td><input type="email" name="email" id="email" required></td>
+        </tr>
+        
+        <tr>
+          <td align="right"><font color="#00FF00">🎂 Age:</font></td>
+          <td><input type="number" name="age" id="age" min="13" max="99" required></td>
+        </tr>
+        
+        <tr>
+          <td align="right"><font color="#00FF00">🌍 Region:</font></td>
+          <td>
+            <select name="region" id="region" required>
+              <option value="">-- Select Your Region --</option>
+              <option value="NA">North America</option>
+              <option value="EU">Europe</option>
+              <option value="ASIA">Asia</option>
+              <option value="AF">Africa</option>
+              <option value="SA">South America</option>
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td align="right" valign="top"><font color="#00FF00">📝 Short Bio:</font></td>
+          <td><textarea name="bio" id="bio" rows="4" cols="30" placeholder="Tell us about your gaming journey..."></textarea></td>
+        </tr>
+
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="🚀 Join the Battle" style="padding: 10px 20px; font-size: 18px; background-color: yellow; border: none; font-weight: bold;">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <p style="color: #FFD700; margin-top: 20px;">💡 You must be 13+ to enter this galaxy of gamers!</p>
+  </center>
+
+  <script>
+    function validateForm() {
+      const age = document.getElementById("age").value;
+      if (age < 13) {
+        alert("You must be at least 13 years old to participate!");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
